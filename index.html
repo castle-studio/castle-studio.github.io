@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CastleStudio">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+      <title>Castle Studio</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+      <link rel='shortcut icon' type='image/x-icon' href='img/logo/favicon.ico' />
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+      <link rel="stylesheet" href="css/animate.css" type="text/css" />
+   </head>
+   <body ng-controller="personController">
+      <div class="navbar-fixed">
+         <nav class="white z-depth-2" role="navigation">
+            <div class="nav-wrapper container">
+               <a id="logo-container" href="#" class="brand-logo">
+               <img src="img/logo/1.png" class="menu"></img>
+               </a>
+               <ul class="right hide-on-med-and-down">
+                  <li>
+                     <a href="#what-we-do" class="black-text scroll">What do we do</a>
+                  </li>
+                  <li>
+                     <a href="#the-team" class="black-text scroll">The Team</a>
+                  </li>
+                  <li>
+                     <a href="#contact-us" class="black-text scroll">Contact Us</a>
+                  </li>
+               </ul>
+               <ul id="nav-mobile" class="side-nav">
+                  <li>
+                     <a href="#what-we-do" class="scroll">What Do We Do</a>
+                  </li>
+                  <li>
+                     <a href="#the-team " class="scroll">The Team</a>
+                  </li>
+                  <li><a href="#contact-us">Contact Us</a></li>
+               </ul>
+               <a href="#" data-activates="nav-mobile" class="button-collapse">
+               <i class="material-icons">menu</i>
+               </a>
+            </div>
+         </nav>
+      </div>
+      <div class="main">
+         <div class="parallax-container">
+            <div class="section no-pad-bot">
+               <div class="container">
+                  <br>
+                  <br>
+                  <div class="container center">
+                     <img src="img/logo/2.png" class="responsive-img logo" id="main-logo" />
+                  </div>
+                  <div class="row center">
+                     <h5 class="header col s12 light white-text animated bounceIn">Web and Android development</h5>
+                  </div>
+                  <div class="row center"></div>
+                  <br>
+                  <br>
+               </div>
+            </div>
+            <div class="parallax">
+               <img src="img/parallax/1.jpg" alt="Parallax Background">
+            </div>
+            <div id="what-we-do"></div>
+         </div>
+         <div class="container">
+            <div class="section">
+               <div class="row" >
+                  <h2 class="header center" >What Do We Do?</h2>
+                  <div class="col s12">
+                     <p class="light center">We assists our customers in the process of materialize their needs, help them building some great products from scratch and make sure it meets their expectations. We take their business as serious as we take ours and offer the best support money can buy.</p>
+                     <p class="center bold">We are happy to offer our services for the benefit of your goals!</p>
+                  </div>
+               </div>
+               <div class="divider"></div>
+               <br>
+               <div class="row center">
+                  <div class="col s12 m4">
+                     <i class="material-icons large animate">perm_identity</i>
+                     <h4 class="light">Consulting</h4>
+                     <p class="light">
+                        Sometimes you don't know what to do or where to start, we'll evaluate the right solution for you. Contact us, it's free.
+                     </p>
+                  </div>
+                  <div class="col s12 m4">
+                     <i class="material-icons large animate">code</i>
+                     <h4 class="light">Web Development</h4>
+                     <p class="light">With the power of the greatest web technologies, we make your website easily accessible across all devices and screen sizes!</p>
+                  </div>
+                  <div class="col s12 m4">
+                     <i class="material-icons large animate">smartphone</i>
+                     <h4 class="light">Mobile Development</h4>
+                     <p class="light">
+                        Mobile apps are the main plate these days. Android? iOS? No problem, we've got you covered!
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="the-team"></div>
+         <div class="parallax-container">
+            <div class="section no-pad-bot">
+               <div class="section">
+                  <div class="row">
+                     <div class="col s12">
+                        <h2 class="header white-text light center">Now, let's meet the team</h2>
+                        <div class="container">
+                           <div class="divider"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col s12 m4 l6" ng-repeat="person in persons">
+                           <div class="container center">
+                              <img ng-src="{{person.image}}" alt="a person photo" class="circle responsive-image" class="{{isClass}}">
+                              <h4 class="header light white-text center">{{person.full_name}} </h4>
+                              <h6 class="white-text">{{person.position}}</h6>
+                              <p class="light white-text hide-on-small-only" style="text-align='justify';"> "{{person.description}}"</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="parallax">
+               <img src="img/parallax/2.jpg" alt="A background">
+            </div>
+         </div>
+         <div id="contact-us" ></div>
+         <div class="section">
+            <div class="col s12 center">
+               <h3>
+                  <i class="material-icons large" id="contact">send</i>
+               </h3>
+               <h4>Need more information? <b>contact us</b> </h4>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col s12 m6 l6">
+                     <div class="row">
+                        <form class="col s12">
+                           <div class="row">
+                              <div class="input-field col s6">
+                                 <input id="first_name" type="text" class="validate">
+                                 <label for="first_name">First Name</label>
+                              </div>
+                              <div class="input-field col s6">
+                                 <input id="last_name" type="text" class="validate">
+                                 <label for="last_name">Last Name</label>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="input-field col s12">
+                                 <input id="email" type="email" class="validate">
+                                 <label for="email">E-Mail</label>
+                              </div>
+                           </div>
+                           <textarea class="materialize-textarea" placeholder="Your Message" required></textarea>
+                           <div class="container center">
+                              <a class="waves-effect waves-light btn black  grey darken-4 z-depth-2"><i class="material-icons white-text right">send</i>Submit</a>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="col s12 m6 l6">
+                     <iframe width="450" height="350" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq6V-EPGJr44RZMEVJ7iHxdY&key=AIzaSyBKkcKx_pz-bgYDWwnjbX6NcyEdo1swY2A" class="hide-on-small-only"></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="parallax-container valign-wrapper">
+         <div class="section no-pad-bot">
+            <div class="container">
+               <div class="row center">
+                  <h2 class="header light white-text center">We get in touch soon!</h2>
+               </div>
+            </div>
+         </div>
+         <div class="parallax">
+            <img src="img/parallax/3.jpg" alt="A background">
+         </div>
+      </div>
+      <footer class="page-footer  grey darken-4 ">
+         <div class="container">
+            <div class="row">
+               <div class="col l6 s12">
+                  <h5 class="white-text">Castle Studio</h5>
+                  <p class="grey-text text-lighten-4">With the Help of the greatest web and mobile technologies, we make your dreams come true!</p>
+               </div>
+               <div class="col l3 s12">
+                  <h5 class="white-text">Connect</h5>
+                  <ul>
+                     <li>
+                        <a class="white-text" href="#">Facebook</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               Made by 
+               <a class="brown-text text-lighten-3" href="#">Castle Studio</a>
+            </div>
+         </div>
+      </footer>
+      <script src="js/angular.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/scroll.js"></script>
+      <script src="js/materialize.min.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/ready.js"></script>
+   </body>
+</html>

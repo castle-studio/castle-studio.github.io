@@ -1,0 +1,32 @@
+.logo {
+    width: 500px;
+}
+
+ .menu {
+    width: 130px;
+}
+
+.parallax-container {
+    height: 800px;
+}
+
+.material-icons {
+    color: black;
+}
+
+.image img {
+    -webkit-transition: all 0.5s ease; 
+  	-moz-transition: all 0.5s ease; 
+  	-o-transition: all 0.5s ease; 
+  	-ms-transition: all 0.5s ease; 
+  	transition: all 0.5s ease;
+}
+
+.image:hover img {
+    -webkit-transform:scale(1.10);
+    -moz-transform:scale(1.10);
+    -ms-transform:scale(1.10);
+    -o-transform:scale(1.10); 
+     transform:scale(1.10);
+}
+
